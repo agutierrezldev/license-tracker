@@ -13,6 +13,7 @@ spring:
           uri: https://github.com/agutierrezldev/license-tracker.git
           #username: jchoy8890
           defaultLabel: feature/-profile-config-server
+          #defaultLabel: ${CONFIG.SERVER.BRANCH:main}
           cloneOnStart: true
           refreshRate: 10
 
