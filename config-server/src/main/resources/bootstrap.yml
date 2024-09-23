@@ -10,11 +10,22 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/agutierrezldev/license-tracker.git
+          uri: https://github.com/agutierrezldev/license-tracker-profile.git
           #username: jchoy8890
-          defaultLabel: feature/-profile-config-server
-          cloneOnStart: true
-          refreshRate: 10
+          #defaultLabel: feature/-profile-config-server
+
+          #encrypt
+          username: ${GITHUB_USER}
+          password: ${GITHUB_TOKEN}
+
+          #defaultLabel: ${CONFIG.SERVER.BRANCH:main}
+          defaultLabel: ${BRANCH}
+          cloneOnStart: true # search to initial up application = true
+          refreshRate: 10 # search then seconds to authentication - validation for 10s
+
+## Encrypt key
+encrypt:
+  key: agutierrezl-secret
 
 ## Eureka Client Configuration
 eureka:
