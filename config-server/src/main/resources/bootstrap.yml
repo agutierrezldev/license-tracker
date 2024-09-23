@@ -15,8 +15,8 @@ spring:
           #defaultLabel: feature/-profile-config-server
 
           #encrypt
-          username: ${GITHUB_USER}
-          password: ${GITHUB_TOKEN}
+          #username: ${GITHUB_USER}
+          #password: ${GITHUB_TOKEN}
 
           #defaultLabel: ${CONFIG.SERVER.BRANCH:main}
           defaultLabel: ${BRANCH}
