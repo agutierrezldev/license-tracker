@@ -26,14 +26,3 @@ spring:
 ## Encrypt key
 encrypt:
   key: agutierrezl-secret
-
-## Eureka Client Configuration
-eureka:
-  client:
-    fetchRegistry: true
-    registerWithEureka: true
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    leaseRenewalIntervalInSeconds: 2
-    leaseExpirationDurationInSeconds: 2
