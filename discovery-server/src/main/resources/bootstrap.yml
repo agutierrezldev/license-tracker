@@ -17,6 +17,7 @@ eureka:
 
   instance:
     hostname: localhost
-    preferIpAddress: false
+    #preferIpAddress: false
+    preferIpAddress: true
     leaseExpirationDurationInSeconds: 10
     leaseRenewalIntervalInSeconds: 10
