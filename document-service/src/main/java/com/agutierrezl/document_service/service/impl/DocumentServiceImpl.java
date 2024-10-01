@@ -52,6 +52,17 @@ public class DocumentServiceImpl implements IDocumentService {
         return null;
     }
 
+    @Override
+    public DocumentDTO disabledById(String id) {
+        DocumentEntity document = documentRepository.findById(id).orElse(null);
+        if (document != null) {
+            document.setState("INACTIVO");
+            documentRepository.save(document);
+            return convertToDTO(document);
+        }
+        return null;
+    }
+
     private DocumentDTO convertToDTO(DocumentEntity documentEntity) {
         return modelMapper.map(documentEntity, DocumentDTO.class);
     }

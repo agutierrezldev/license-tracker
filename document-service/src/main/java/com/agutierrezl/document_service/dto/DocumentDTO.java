@@ -2,12 +2,14 @@ package com.agutierrezl.document_service.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class DocumentDTO {
 
     private String id;
@@ -24,6 +26,7 @@ public class DocumentDTO {
     @NotNull
     private Integer length;
 
-    private String state;
+    @Builder.Default
+    private String state = "ACTIVO";
 
 }

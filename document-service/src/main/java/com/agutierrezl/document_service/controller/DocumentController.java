@@ -36,4 +36,9 @@ public class DocumentController {
         return ResponseEntity.ok(documentService.getById(id));
     }
 
+    @GetMapping("/disabled/{id}")
+    public ResponseEntity<DocumentDTO> disabledById(@PathVariable String id) {
+        return ResponseEntity.ok(documentService.disabledById(id));
+    }
+
 }

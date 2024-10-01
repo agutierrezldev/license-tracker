@@ -3,6 +3,7 @@ package com.agutierrezl.client_service.proxy.openfeign;
 import com.agutierrezl.client_service.model.response.DocumentDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -15,4 +16,7 @@ public interface ICloudGatewayFeign {
 
     @PostMapping("/api/document-service/documents")
     DocumentDTO save(DocumentDTO documentDTO);
+
+    @GetMapping("/api/document-service/documents/disabled/{id}")
+    DocumentDTO disabledById(@PathVariable("id") String id);
 }

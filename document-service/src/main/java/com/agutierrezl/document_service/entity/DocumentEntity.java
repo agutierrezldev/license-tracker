@@ -2,6 +2,7 @@ package com.agutierrezl.document_service.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -12,7 +13,9 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Data
 @Document(collection = "documents")
 public class DocumentEntity {
+
     @Id
+    @EqualsAndHashCode.Include
     private String id;
 
     @Field
@@ -28,5 +31,5 @@ public class DocumentEntity {
     private Integer length;
 
     @Field
-    private String state;
+    private String state = "ACTIVO";
 }

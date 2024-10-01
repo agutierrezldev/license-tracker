@@ -22,8 +22,12 @@ public class ClientService {
         return documentServiceFeign.getAll();
     }
 
-    public DocumentDTO save(@RequestBody DocumentDTO documentDTO){
+    public DocumentDTO save(DocumentDTO documentDTO){
         return documentServiceFeign.save(documentDTO);
+    }
+
+    public DocumentDTO disabledById(String id){
+        return documentServiceFeign.disabledById(id);
     }
 
 
