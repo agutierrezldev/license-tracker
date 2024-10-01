@@ -33,8 +33,8 @@ public class GlobalFilters implements GlobalFilter {
             log.info("Time elapsed PostFilter: "+(System.currentTimeMillis() - startime));
             exchange.getResponse().getHeaders().add("appCallerName",
                     exchange.getRequest().getHeaders().getFirst("appCallerName"));
-            exchange.getResponse().getCookies().add("appCallerName",
-                    ResponseCookie.from("AppCallerName",exchange.getRequest().getHeaders().getFirst("appCallerName")).build());
+//            exchange.getResponse().getCookies().add("appCallerName",
+//                    ResponseCookie.from("AppCallerName",exchange.getRequest().getHeaders().getFirst("appCallerName")).build());
         }));
     }
 }
