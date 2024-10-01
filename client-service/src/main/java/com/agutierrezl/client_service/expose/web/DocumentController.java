@@ -3,20 +3,24 @@ package com.agutierrezl.client_service.expose.web;
 import com.agutierrezl.client_service.model.response.DocumentDTO;
 import com.agutierrezl.client_service.service.ClientService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-public class ClientController {
+public class DocumentController {
 
     private final ClientService clientService;
 
     @GetMapping("/documents")
     public List<DocumentDTO> getAllDocuments(){
         return clientService.getAll();
+    }
+
+    @GetMapping("/documents/{id}")
+    public DocumentDTO getById(@PathVariable String id){
+        return clientService.getById(id);
     }
 
     @PostMapping("/documents-save")

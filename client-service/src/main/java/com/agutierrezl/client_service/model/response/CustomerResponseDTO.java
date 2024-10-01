@@ -5,11 +5,11 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class DocumentDTO {
+public class CustomerResponseDTO {
     private String id;
     private String name;
-    private String type;
-    private String description;
-    private Integer length;
+    private String surname;
+    private DocumentDTO documentType;
+    private String document;
     private String state;
 }
