@@ -77,8 +77,8 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
 
-    private CustomerDTO convertToDTO(CustomerEntity documentEntity) {
-        return modelMapper.map(documentEntity, CustomerDTO.class);
+    private CustomerDTO convertToDTO(CustomerEntity customerEntity) {
+        return modelMapper.map(customerEntity, CustomerDTO.class);
     }
 
     private CustomerEntity convertToEntity(CustomerDTO documentDTO) {
