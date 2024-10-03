@@ -1,4 +1,4 @@
-package com.agutierrezl.document_service.entity;
+package com.agutierrezl.customer_service.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,8 +11,9 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Document(collection = "documents")
-public class DocumentEntity {
+@Document(collection = "customers")
+public class CustomerEntity {
+
     @Id
     @EqualsAndHashCode.Include
     private String id;
@@ -21,14 +22,15 @@ public class DocumentEntity {
     private String name;
 
     @Field
-    private String type;
+    private String surname;
 
     @Field
-    private String description;
+    private String documentType;
 
     @Field
-    private Integer length;
+    private String document;
 
     @Field
-    private String state = "ACTIVO";
+    private String state;
+
 }

@@ -1,4 +1,4 @@
-package com.agutierrezl.document_service.dto;
+package com.agutierrezl.customer_service.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -10,23 +10,21 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class DocumentDTO {
-
+public class CustomerDTO {
     private String id;
 
     @NotNull
     private String name;
 
     @NotNull
-    private String type;
+    private String surname;
 
     @NotNull
-    private String description;
+    private String documentType;
 
     @NotNull
-    private Integer length;
+    private String document;
 
     @Builder.Default
     private String state = "ACTIVO";
-
 }

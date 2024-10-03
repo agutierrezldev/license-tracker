@@ -9,5 +9,6 @@ public interface IDocumentService {
     DocumentDTO save(DocumentDTO documentDTO);
     List<DocumentDTO> getAll();
     DocumentDTO getById(String id);
+    DocumentDTO disabledById(String id);
 
 }
