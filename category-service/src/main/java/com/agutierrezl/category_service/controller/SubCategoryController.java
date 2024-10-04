@@ -33,10 +33,10 @@ public class SubCategoryController {
         return ResponseEntity.ok(subcategoryService.update(id, subcategoryDTO));
     }
 
-//    @GetMapping("/{id}")
-//    public ResponseEntity<CategoryDTO> getById(@PathVariable String id) {
-//        return ResponseEntity.ok(categoryService.getById(id));
-//    }
+    @GetMapping("/{id}")
+    public ResponseEntity<SubCategoryDTO> getById(@PathVariable String id) {
+        return ResponseEntity.ok(subcategoryService.getById(id));
+    }
 //
 //    @GetMapping("/disabled/{id}")
 //    public ResponseEntity<CategoryDTO> disabledById(@PathVariable String id) {
