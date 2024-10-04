@@ -63,6 +63,10 @@ public class SubCategoryServiceImpl implements ISubCategoryService {
 
     @Override
     public SubCategoryDTO getById(String id) {
+        SubCategoryEntity subcategory = subcategoryRepository.findById(id).orElse(null);
+        if (subcategory != null) {
+            return convertToDTO(subcategory);
+        }
         return null;
     }
 
